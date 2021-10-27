@@ -9,7 +9,7 @@ function App() {
         <p>
           Portfolio: Ale Valverde!
         </p>
-        <p>Hola mi amor ❤️❤️❤️❤️ </p>
+        <p>portfolio en construcción</p>
       </header>
     </div>
   );
