@@ -1,18 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Portada from "./components/Portada/Portada";
+import About from "./components/About/About";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Portfolio: Ale Valverde!
-        </p>
-        <p>portfolio en construcción</p>
+      <header className="App-header">        
+        <Portada/>
+        <About />
       </header>
     </div>
   );
 }
 
 export default App;
+
