@@ -1,9 +1,9 @@
 @import "../../global.scss";
 
 .menu {
-  width: 250px;
+  background-color: white;
+  width: 240px;
   height: 100vh;
-  background-color: $mainColor;
   position: fixed;
   top: 0;
   right: -250px;
@@ -26,7 +26,7 @@
     padding: 0;
     list-style: none;
     font-size: 25px;
-    color: white;
+    color: $mainColor;
     width: 60%;
   } 
 

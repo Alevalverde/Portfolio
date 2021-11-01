@@ -27,7 +27,7 @@ export default function Topbar({menuOpen, setMenuOpen}) {
         </div>
         <div className="center">
           <a href="#intro" className="logo">
-            αλέξανδρος. 
+            {/* αλέξανδρος.  */}
           </a>
         </div>
         <div className="right">
