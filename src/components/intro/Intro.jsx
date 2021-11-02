@@ -10,7 +10,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 2000,
       backSpeed: 70,
-      strings: ["Full Stack Developer", "Designer", "& Artist"],
+      strings: ["Full Stack Developer", "Designer & Artist", "Freelance"],
     });
   }, []);
 
@@ -19,26 +19,26 @@ export default function Intro() {
       <div className="left">
         <div className="imgContainer">
           <img
-            src={process.env.PUBLIC_URL + "/assets/man.png"}
+            src={process.env.PUBLIC_URL + "/assets/ale.png"}
             alt="img portada"
           />
         </div>
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Hi There, I'm</h2>
+          <h3>Hi There, I'm</h3>
           <h1>Alejandro Valverde</h1>
           <h3>
-            Freelance <span ref={textRef}></span>
+            <span ref={textRef}></span>
           </h3>
-          <a href="#portfolio">
+        </div>
+      </div>
+          <a href="#aboutMe">
             <img
               src={process.env.PUBLIC_URL + "/assets/down.png"}
               alt="arrow down"
             />
           </a>
-        </div>
-      </div>
     </div>
   );
 }
