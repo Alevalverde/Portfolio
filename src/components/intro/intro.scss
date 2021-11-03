@@ -1,28 +1,44 @@
+@import "../../global";
+
 .intro {
+  
   background-color: white;
   display: flex;
 
   .left {
-    flex: 0.5;
+    flex: 0.6;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     .imgContainer {
-      // overflow: hidden;
-      width: 1100px;
-      height: 1100px;
-      background: linear-gradient(230.02deg, #50bbf8 -12.26%, #f9587f 112.12%);
-      border-radius: 50%;
+      overflow: hidden;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      float: right;
-      margin-top: 0px;
-      margin-right: 0px;
+      border: none;
+
+      clip-path: circle(50% at 50% 50%);
+      width: 700px;
+      height: 700px;
+      // background-color: $mainColor;
+
+      // clip-path: polygon(85% 0, 100% 50%, 85% 100%, 10% 100%, 34% 50%, 10% 0);
+      // width: 800px;
+      // height: 750px;
+      background: linear-gradient(
+        230deg,
+        rgb(251, 251, 251) 25%,
+        $mainColor 80%
+      );
 
       img {
-        position: relative;
-        height: 75%;
-        margin-bottom: 200px;
+        position: absolute;
+        margin-right: 100px;
+        margin-bottom: 0px;
+        height: 80%;
       }
     }
   }
@@ -54,10 +70,9 @@
 
         span {
           font-size: inherit;
-          color: crimson;
+          color: $mainColor;
         }
       }
-
     }
   }
   a {

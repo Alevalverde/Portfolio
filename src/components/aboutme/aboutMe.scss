@@ -1,4 +1,81 @@
-.aboutMe {
-  background-color: white;
+@import "../../global";
 
+.aboutMe {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  .left {
+    // background-color: brown;
+    flex: 4;
+    color: white;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .right {
+    // background-color: lawngreen;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -150px;
+
+    .title {
+      color: $mainColor;
+      text-align: center;
+    }
+
+    .description {
+      text-align: justify;
+      margin: 10px 200px;
+      font-size: 22px;
+      color: rgb(50, 50, 50);
+      font-weight: 400;
+    }
+
+    .boxSliders {
+      // background-color: aquamarine;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 800px;
+      height: 500px;
+      
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        // background-color: rgb(241, 224, 145);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          width: 150px;
+          text-align: center;
+          color: rgb(50, 50, 50);
+        }
+
+        .slider {
+          max-width: 100%;
+
+          img {
+            max-width: 70px;
+            margin: 15px;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.2);
+              -webkit-filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
+              filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
+            }
+          }
+        }
+      }
+    }
+  }
 }

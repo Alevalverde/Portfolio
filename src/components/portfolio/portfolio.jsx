@@ -7,19 +7,12 @@ import {
   dspPortfolio,
   mobilePortfolio,
   artPortfolio,
+  listArea
 } from "../../data";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
-  const [data, setData] = useState([]);
-
-  const list = [
-    { id: "featured", title: "Featured" },
-    { id: "spa", title: "SPA" },
-    { id: "dsp", title: "Design Page" },
-    { id: "mobile", title: "Mobile" },
-    { id: "art", title: "Art" },
-  ];
+  const [data, setData] = useState([]);  
 
   useEffect(() => {
     switch (selected) {
@@ -47,7 +40,7 @@ export default function Portfolio() {
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
-        {list.map((e) => (
+        {listArea.map((e) => (
           <PortfolioList
             title={e.title}
             active={selected === e.id}
