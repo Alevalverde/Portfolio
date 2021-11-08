@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .menu {
-  background-color: rgba(0, 0, 0, 0.082);
+  background-color: #0089c80a;
   width: 240px;
   height: 100vh;
   position: fixed;
@@ -25,13 +25,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 25px;
+    font-size: 30px;
     color: $mainColor;
-    width: 60%;
-  } 
+    width: 70%;
+  }
 
   li {
-      margin-bottom: 25px;
+    margin-bottom: 25px;
     a {
       font-size: inherit;
       color: inherit;
@@ -40,7 +40,9 @@
 
     &:hover {
       a {
-        font-weight: 700;
+        font-weight: 900;
+        // -webkit-filter: drop-shadow(2px 2px 2px rgb(34, 34, 34));
+        // filter: drop-shadow(2px 2px 2px rgb(34, 34, 34));
       }
     }
   }

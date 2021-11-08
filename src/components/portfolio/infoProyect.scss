@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+.modalContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+
+  height: 700px;
+  width: 1000px;
+  margin-top: 50px;
+  background-color: $mainColor;
+  border-radius: 75px;
+  overflow: visible;
+  .modal {
+    flex: 0.99;
+    justify-content: center;
+    height: 98%;
+    background-color: #e8f7ff;
+    border: white solid 3px;
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      cursor: pointer;
+    }
+  }
+}

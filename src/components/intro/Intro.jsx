@@ -8,10 +8,10 @@ export default function Intro() {
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
-      typeSpeed:  150,
+      typeSpeed:  160,
       backDelay: 3000,
       backSpeed: 100,
-      strings: ["Full Stack Developer", "Designer & Artist", "Freelance"],
+      strings: ["Full Stack JavaScript Developer", "Designer & Artist", "Freelance"],
     });
   }, []);
 
@@ -20,6 +20,7 @@ export default function Intro() {
       <div className="left">
         <div className="imgContainer">
           <img
+            // src={process.env.PUBLIC_URL + "/assets/imgPortada.png"}
             src={process.env.PUBLIC_URL + "/assets/ale.png"}
             alt="img portada"
           />
@@ -27,7 +28,7 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h3>Hi There, I'm</h3>
+          <h2>Hi There, I'm</h2>
           <h1>Alejandro Valverde</h1>
           <h3>
             <span ref={textRef}></span>

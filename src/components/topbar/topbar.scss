@@ -10,6 +10,10 @@
   z-index: 3;
   align-items: center;
   transition: all 1s ease;
+  // -webkit-filter: drop-shadow(1px 5px 1px rgba(34, 34, 34, 0.15));
+  //           filter: drop-shadow(1px 5px 1px rgba(34, 34, 34, 0.15));
+
+  
 
   .wrapper {
     padding: 10px 30px;
@@ -33,10 +37,27 @@
         display: flex;
         align-items: center;
         margin-left: 30px;
+        
+        a:visited {
+          color: inherit;
+        }
+        
+        a:link {
+          color: inherit;
+        }        
 
         .icon {
-          font-size: 40px;
+          font-size: 45px;
           cursor: pointer;
+          
+
+
+          &:hover {
+            // color: $colorSec;
+            
+            -webkit-filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
+            filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
+          }
         }
 
         span {
@@ -65,9 +86,12 @@
     }
   }
   &.active {
+
+    transition: all 1s ease;
     background-color: $mainColor;
     color: white;
-    transition: all 1s ease;
+    
+
 
     .hamburger {
       span {
