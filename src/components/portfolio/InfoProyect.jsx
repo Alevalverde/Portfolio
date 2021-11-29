@@ -1,10 +1,7 @@
 import "./infoProyect.scss";
 import { Close } from "@mui/icons-material";
-import {setModal, modal} from "./Portfolio"
 
-export default function InfoProyect() { 
-
-
+export default function InfoProyect({modal, setModal}) {
   return (
     <div className="modalContainer">
       <div className="modal">

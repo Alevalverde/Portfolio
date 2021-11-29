@@ -15,7 +15,6 @@ export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [modal, setModal] = useState(false);
   const [data, setData] = useState([]);
-  
 
   useEffect(() => {
     switch (selected) {
@@ -57,7 +56,7 @@ export default function Portfolio() {
           <div className="container">
             {data.length ? (
               data.map((d) => (
-                <div className="item" id={d.id} onClick={()=>setModal(true)}>
+                <div className="item" id={d.id} onClick={() => setModal(true)}>
                   <img src={d.img} alt="" />
                   <h3>{d.title}</h3>
                 </div>
