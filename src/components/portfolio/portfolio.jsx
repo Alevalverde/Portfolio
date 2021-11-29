@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PortfolioList from "../portfolioList/PortfolioList";
+import PortfolioList from "../portfolioList/PortfolioList"
 import InfoProyect from "./InfoProyect";
 import "./portfolio.scss";
 import {
@@ -13,8 +13,9 @@ import {
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
-  const [modal, setModal] = useState(false);
   const [data, setData] = useState([]);
+  const [modal, setModal] = useState(false);
+  const [capture, setCapture] = useState(null);
 
   useEffect(() => {
     switch (selected) {
@@ -38,42 +39,46 @@ export default function Portfolio() {
     }
   }, [selected]);
 
+  function all(e) {
+    setModal(true);
+    setCapture(e);
+  }
+
   return (
     <div className="portfolio" id="portfolio">
-      {!modal ? (
-        <>
-          <h1>Portfolio</h1>
-          <ul>
-            {listArea.map((e) => (
-              <PortfolioList
-                title={e.title}
-                active={selected === e.id}
-                setSelected={setSelected}
-                id={e.id}
-              />
-            ))}
-          </ul>
-          <div className="container">
-            {data.length ? (
-              data.map((d) => (
-                <div className="item" id={d.id} onClick={() => setModal(true)}>
-                  <img src={d.img} alt="" />
-                  <h3>{d.title}</h3>
-                </div>
-              ))
-            ) : (
-              // eslint-disable-next-line jsx-a11y/alt-text
+      <>
+        <h1>Portfolio</h1>
+        <ul>
+          {listArea.map((e) => (
+            <PortfolioList
+              title={e.title}
+              active={selected === e.id}
+              setSelected={setSelected}
+              id={e.id}
+            />
+          ))}
+        </ul>
+        <div className="container">
+          {data.length ? (
+            data.map((d) => (
+              <div className="item" id={d.id} onClick={() => all(d.id)}>
+                <img src={d.img} alt="" />
+                <h3>{d.title}</h3>
+              </div>
+            ))
+          ) : (
+            // eslint-disable-next-line jsx-a11y/alt-text
+            <div className="boxloader">
               <img
-                src="https://i.imgur.com/VxJeFsf.jpg"
-                height="400px"
-                margin-top="150px"
+                className="loader"
+                src="https://www.gifsanimados.org/data/media/695/en-construccion-imagen-animada-0035.gif"
+                alt="construction"
               />
-            )}
-          </div>
-        </>
-      ) : (
-        <InfoProyect modal={modal} />
-      )}
+            </div>
+          )}
+        </div>
+      </>
+      {modal && <InfoProyect setModal={setModal} capture={capture} />}
     </div>
   );
 }

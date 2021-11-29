@@ -24,6 +24,8 @@ export const mobilePortfolio = [
 export const artPortfolio = [
 ]
 
+
+
 export const tech = [
     { id: 1, tech: "front", img: "/assets/icons/html.png", alt: "html5", webSite : "https://html.spec.whatwg.org/multipage/"},
     { id: 3, tech: "front", img: "/assets/icons/css.png", alt: "css3", webSite : "https://www.w3.org/Style/CSS/Overview.en.html" },
