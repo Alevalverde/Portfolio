@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 export default function Contact() {
   const [done, setDone] = useState(false);
   const form = useRef();
+  const [show, setShow] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,30 +40,39 @@ export default function Contact() {
           <h2> Hablemos sobre tu proyecto...</h2>
           <div className="info">
             <div className="infoItem">
-              <img
-                src={process.env.PUBLIC_URL + "/assets/phone.png"}
-                alt="phone"
-                className="icon"
-              />
+              <div className="containerIco">
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/phone.png"}
+                  alt="phone"
+                  className="icon"
+                />
+              </div>
               +54 9 261 2062481
             </div>
+
             <div className="infoItem">
-              <img
-                src={process.env.PUBLIC_URL + "/assets/email.png"}
-                alt="email"
-                className="icon"
-              />
-              alevalverdev8@gmail.com
-            </div>
+              <div className="containerIco">
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/email.png"}
+                  alt="email"
+                  className="icon"
+                />
+                </div>
+                alevalverdev8@gmail.com
+              </div>
+
             <div className="infoItem">
-              <img
-                src={process.env.PUBLIC_URL + "/assets/address.png"}
-                alt="address"
-                className="icon"
-              />
+              <div className="containerIco">
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/address.png"}
+                  alt="address"
+                  className="icon"
+                />
+              </div>
               Mendoza - Argentina
             </div>
           </div>
+
           <div className="iconos">
             <div className="itemContainer">
               <a

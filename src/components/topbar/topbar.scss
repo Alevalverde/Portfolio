@@ -9,7 +9,7 @@
   top: 0;
   z-index: 3;
   align-items: center;
-  transition: all 1s ease; 
+  transition: all 1s ease;
 
   .wrapper {
     padding: 10px 30px;
@@ -33,24 +33,20 @@
         display: flex;
         align-items: center;
         margin-left: 30px;
-        
+
         a:visited {
           color: inherit;
         }
-        
+
         a:link {
           color: inherit;
-        }        
+        }
 
         .icon {
           font-size: 45px;
           cursor: pointer;
-          
-
 
           &:hover {
-            // color: $colorSec;
-            
             -webkit-filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
             filter: drop-shadow(1px 4px 1px rgba(34, 34, 34, 0.376));
           }
@@ -74,7 +70,7 @@
         span {
           width: 100%;
           height: 4px;
-          background-color:$mainColor;
+          background-color: $mainColor;
           transform-origin: left;
           transition: all 1s ease;
         }
@@ -82,12 +78,9 @@
     }
   }
   &.active {
-
     transition: all 1s ease;
     background-color: $mainColor;
     color: white;
-    
-
 
     .hamburger {
       span {

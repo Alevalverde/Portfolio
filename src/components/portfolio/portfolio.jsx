@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PortfolioList from "../portfolioList/PortfolioList"
+import PortfolioList from "../portfolioList/PortfolioList";
 import InfoProyect from "./InfoProyect";
 import "./portfolio.scss";
 import {
@@ -16,6 +16,7 @@ export default function Portfolio() {
   const [data, setData] = useState([]);
   const [modal, setModal] = useState(false);
   const [capture, setCapture] = useState(null);
+  const [section, setSection] = useState(null);
 
   useEffect(() => {
     switch (selected) {
@@ -42,6 +43,7 @@ export default function Portfolio() {
   function all(e) {
     setModal(true);
     setCapture(e);
+    setSection(selected);
   }
 
   return (
@@ -62,7 +64,7 @@ export default function Portfolio() {
           {data.length ? (
             data.map((d) => (
               <div className="item" id={d.id} onClick={() => all(d.id)}>
-                <img src={d.img} alt="" />
+                <img src={process.env.PUBLIC_URL + d.img} alt="" />
                 <h3>{d.title}</h3>
               </div>
             ))
@@ -78,7 +80,15 @@ export default function Portfolio() {
           )}
         </div>
       </>
-      {modal && <InfoProyect setModal={setModal} capture={capture} />}
+      {modal && <InfoProyect setModal={setModal} capture={capture} section={section}/>}
+      <div className="a">
+        <a href="#contact">
+          <img
+            src={process.env.PUBLIC_URL + "/assets/down.png"}
+            alt="arrow down"
+          />
+        </a>
+      </div>
     </div>
   );
 }
